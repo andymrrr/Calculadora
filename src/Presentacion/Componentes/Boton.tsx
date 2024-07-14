@@ -5,11 +5,20 @@ interface Propiedad{
     titulo:string,
     color?: string,
     tamanoDoble?:boolean,
-    textoNegro?: boolean
+    textoNegro?: boolean,
+    onPress: ()=> void
 }
-export const Boton = ({titulo,color = Colores.GrisOscuro, tamanoDoble= false, textoNegro= false}:Propiedad) => {
+export const Boton = ({
+    titulo,
+    color = Colores.GrisOscuro, 
+    tamanoDoble= false, 
+    textoNegro= false,
+    onPress
+}:Propiedad) => {
   return (
-    <Pressable style={({pressed}) => ({
+    <Pressable 
+    onPress={()=> onPress()}
+    style={({pressed}) => ({
         ...EstiloGlobales.Boton,
         backgroundColor: color,
         width: (tamanoDoble) ? 180 : 80,

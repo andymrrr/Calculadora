@@ -11,33 +11,48 @@ export const CalculadoraPantalla = () => {
         <Text style={EstiloGlobales.SubResultado}>15</Text>
       </View>
       <View style={EstiloGlobales.Fila}>
-        <Boton titulo='C' color={Colores.GrisClaro} textoNegro/>
-        <Boton titulo='+/-'color={Colores.GrisClaro} textoNegro/>
-        <Boton titulo='del'color={Colores.GrisClaro} textoNegro/>
-        <Boton titulo='/' color={Colores.Naranja}/>
+        <Boton
+          onPress={() => {}}
+          titulo="C"
+          color={Colores.GrisClaro}
+          textoNegro
+        />
+        <Boton
+          onPress={() => {}}
+          titulo="+/-"
+          color={Colores.GrisClaro}
+          textoNegro
+        />
+        <Boton
+          onPress={() => {}}
+          titulo="del"
+          color={Colores.GrisClaro}
+          textoNegro
+        />
+        <Boton onPress={() => {}} titulo="/" color={Colores.Naranja} />
       </View>
       <View style={EstiloGlobales.Fila}>
-      <Boton titulo='7' />
-        <Boton titulo='8'/>
-        <Boton titulo='9'/>
-        <Boton titulo='X' color={Colores.Naranja}/>
+        <Boton onPress={() => {}} titulo="7" />
+        <Boton onPress={() => {}} titulo="8" />
+        <Boton onPress={() => {}} titulo="9" />
+        <Boton onPress={() => {}} titulo="X" color={Colores.Naranja} />
       </View>
       <View style={EstiloGlobales.Fila}>
-      <Boton titulo='4' />
-        <Boton titulo='5'/>
-        <Boton titulo='6'/>
-        <Boton titulo='-' color={Colores.Naranja}/>
+        <Boton onPress={() => {}} titulo="4" />
+        <Boton onPress={() => {}} titulo="5" />
+        <Boton onPress={() => {}} titulo="6" />
+        <Boton onPress={() => {}} titulo="-" color={Colores.Naranja} />
       </View>
       <View style={EstiloGlobales.Fila}>
-      <Boton titulo='1' />
-        <Boton titulo='2'/>
-        <Boton titulo='3'/>
-        <Boton titulo='+' color={Colores.Naranja}/>
+        <Boton onPress={() => {}} titulo="1" />
+        <Boton onPress={() => {}} titulo="2" />
+        <Boton onPress={() => {}} titulo="3" />
+        <Boton onPress={() => {}} titulo="+" color={Colores.Naranja} />
       </View>
       <View style={EstiloGlobales.Fila}>
-      <Boton titulo='0' tamanoDoble={true} />
-        <Boton titulo='.'/>
-        <Boton titulo='+' color={Colores.Naranja}/>
+        <Boton onPress={() => {}} titulo="0" tamanoDoble={true} />
+        <Boton onPress={() => {}} titulo="." />
+        <Boton onPress={() => {}} titulo="+" color={Colores.Naranja} />
       </View>
     </View>
   );
