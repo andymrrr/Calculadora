@@ -3,6 +3,8 @@ import {
   StatusBar,
   View,
 } from 'react-native';
+import { EstiloGlobales } from './Config/theme/Tema-App';
+import { CalculadoraPantalla } from './Presentacion/Pantallas/Calculadora-Pantalla';
 
 
 
@@ -11,12 +13,12 @@ function App(){
  
 
   return (
-    <View >
+    <View style={EstiloGlobales.Fondo} >
       <StatusBar
         barStyle={ 'light-content'}
         backgroundColor={"black"}
       />
-
+      <CalculadoraPantalla/>
     </View>
   );
 }
