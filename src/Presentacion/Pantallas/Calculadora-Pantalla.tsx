@@ -5,8 +5,8 @@ import { Boton } from '../Componentes/Boton';
 import { useCalculadora } from '../Hooks/useCalculadora';
 
 export const CalculadoraPantalla = () => {
-    const {numero,numeroAnterior, ConstruirNumero,alternarSimbolo,limpiar, eliminarOperacion, 
-           operacionDividir,operacionMultiplicar,operacionResta,operacionSumar, Calcular} = useCalculadora()
+    const {formula,numero,numeroAnterior, ConstruirNumero,alternarSimbolo,Limpiar,EliminarOperacion, 
+           Dividir,Multiplicar,Restar,Sumar,Resultado} = useCalculadora()
   return (
     <View style={EstiloGlobales.CalculadoraContenedor}>
       <View style={{paddingHorizontal: 30, marginBottom: 20}}>
@@ -14,7 +14,7 @@ export const CalculadoraPantalla = () => {
           adjustsFontSizeToFit
           numberOfLines={1}
           style={EstiloGlobales.Resultado}>
-          {numero}
+          {formula}
         </Text>
         <Text
           adjustsFontSizeToFit
@@ -25,7 +25,7 @@ export const CalculadoraPantalla = () => {
       </View>
       <View style={EstiloGlobales.Fila}>
         <Boton
-          onPress={() => limpiar()}
+          onPress={() => Limpiar()}
           titulo="C"
           color={Colores.GrisClaro}
           textoNegro
@@ -37,14 +37,14 @@ export const CalculadoraPantalla = () => {
           textoNegro
         />
         <Boton
-          onPress={() => eliminarOperacion()}
+          onPress={() => EliminarOperacion()}
           titulo="del"
           color={Colores.GrisClaro}
           textoNegro
         />
         <Boton
-          onPress={() => operacionDividir()}
-          titulo="/"
+          onPress={() => Dividir()}
+          titulo="÷"
           color={Colores.Naranja}
         />
       </View>
@@ -53,8 +53,8 @@ export const CalculadoraPantalla = () => {
         <Boton onPress={() => ConstruirNumero('8')} titulo="8" />
         <Boton onPress={() => ConstruirNumero('9')} titulo="9" />
         <Boton
-          onPress={() => operacionMultiplicar()}
-          titulo="X"
+          onPress={() => Multiplicar()}
+          titulo="x"
           color={Colores.Naranja}
         />
       </View>
@@ -63,7 +63,7 @@ export const CalculadoraPantalla = () => {
         <Boton onPress={() => ConstruirNumero('5')} titulo="5" />
         <Boton onPress={() => ConstruirNumero('6')} titulo="6" />
         <Boton
-          onPress={() => operacionResta()}
+          onPress={() => Restar()}
           titulo="-"
           color={Colores.Naranja}
         />
@@ -73,7 +73,7 @@ export const CalculadoraPantalla = () => {
         <Boton onPress={() => ConstruirNumero('2')} titulo="2" />
         <Boton onPress={() => ConstruirNumero('3')} titulo="3" />
         <Boton
-          onPress={() => operacionSumar()}
+          onPress={() => Sumar()}
           titulo="+"
           color={Colores.Naranja}
         />
@@ -85,7 +85,7 @@ export const CalculadoraPantalla = () => {
           tamanoDoble={true}
         />
         <Boton onPress={() => ConstruirNumero('.')} titulo="." />
-        <Boton onPress={() => Calcular()} titulo="=" color={Colores.Naranja} />
+        <Boton onPress={() => Resultado()} titulo="=" color={Colores.Naranja} />
       </View>
     </View>
   );
