@@ -6,7 +6,7 @@ import { useCalculadora } from '../Hooks/useCalculadora';
 
 export const CalculadoraPantalla = () => {
     const {numero,numeroAnterior, ConstruirNumero,alternarSimbolo,limpiar, eliminarOperacion, 
-           operacionDividir,operacionMultiplicar,operacionResta,operacionSumar} = useCalculadora()
+           operacionDividir,operacionMultiplicar,operacionResta,operacionSumar, Calcular} = useCalculadora()
   return (
     <View style={EstiloGlobales.CalculadoraContenedor}>
       <View style={{paddingHorizontal: 30, marginBottom: 20}}>
@@ -85,7 +85,7 @@ export const CalculadoraPantalla = () => {
           tamanoDoble={true}
         />
         <Boton onPress={() => ConstruirNumero('.')} titulo="." />
-        <Boton onPress={() => {}} titulo="=" color={Colores.Naranja} />
+        <Boton onPress={() => Calcular()} titulo="=" color={Colores.Naranja} />
       </View>
     </View>
   );

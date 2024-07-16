@@ -94,6 +94,27 @@ export const useCalculadora = () => {
     operacionAnterior.current = Operador.resta;
     
   }
+  const Calcular =()=>{
+    const numeroUno = Number(numero);
+    const numeroDos = Number(numeroAnterior)
+    switch (operacionAnterior.current) {
+      case Operador.suma:
+        setNumero(`${numeroUno + numeroDos}`)
+        break;
+      case Operador.resta:
+        setNumero(`${numeroDos - numeroUno}`);
+        break;
+      case Operador.multiplicar:
+        setNumero(`${numeroUno * numeroDos}`);
+        break;
+      case Operador.dividir:
+        setNumero(`${numeroDos / numeroUno}`);
+        break;      
+      default:
+        throw new Error("Operacion no Implementada")
+    }
+    setNumeroAnterior("0")
+  }
   return{
     numero,
     numeroAnterior,
@@ -105,6 +126,7 @@ export const useCalculadora = () => {
     operacionDividir,
     operacionMultiplicar,
     operacionSumar,
-    operacionResta
+    operacionResta,
+    Calcular
   }
 }
